@@ -1,0 +1,49 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* Style the sidebar (left navigation) */
+.sidebar {
+  width: 150px; /* Adjust the width as needed */
+  background-color: transparent; /* Transparent background */
+  position: fixed; /* Keep it fixed on the left side */
+  top: 0;
+  left: 0;
+  height: 100%; /* Full height */
+  display: flex; /* Use flexbox to center items vertically */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  padding: 20px; /* Add some padding to the links */
+  color: white; /* Text color */
+  font-size: 18px; /* Adjust font size as needed */
+  border-right: 1px solid white; /* Add a white border to the right */
+}
+
+/* Style the navigation links in the sidebar */
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px; /* Add extra spacing between links */
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white; /* Text color */
+}
+
+/* Style the content area to account for the space taken by the sidebar */
+.content {
+  margin-left: 251px; /* Adjust this to match the sidebar width and border width */
+  padding: 20px; /* Add some padding to the content */
+}
