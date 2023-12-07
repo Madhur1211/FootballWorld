@@ -1,0 +1,37 @@
+<section id="teams" class="bg-dark text-white text-center py-5">
+    <h1 class="text-white">{{title}}</h1>
+    {{!-- add a link to ADD --}}
+    {{#if user}}
+    <a href="/teams/add"><button class="btn btn-primary">Add new Team</button></a>
+    {{/if}}
+    {{!-- show data in table --}}
+    {{!-- eah row will have action to delete/edit --}}
+    <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>National Team</th>
+        <th>Captain</th>
+        <th>Manager</th>
+        {{#if user}}
+        <th>Action</th>
+        {{/if}}
+      </tr>
+    </thead>
+    <tbody>
+      {{#each dataset}}
+        <tr>
+          <td>{{this.team}}</td>
+          <td>{{this.captain}}</td>
+          <td>{{this.manager}}</td>
+          {{#if ../user}}
+          <td>
+            <a href="/teams/edit/{{this._id}}"><i class="fas fa-pencil-alt"></i></a><b>/</b>
+            <a href="/teams/delete/{{this._id}}" onclick="return confirmDeletion()"><i class="fas fa-trash"></i></a>
+          </td>
+          {{/if}}
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+</section>

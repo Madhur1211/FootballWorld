@@ -5,7 +5,7 @@ body {
 
 
 #hero {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/images/bg-index.jpg'); 
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/images/bg-home.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -30,8 +30,8 @@ body {
     transform: scale(1.2); /* Increase size on hover */
 }
 
-#about {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/images/bg-about.jpg'); 
+#teams {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/images/bg-teams.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -41,76 +41,28 @@ body {
     justify-content: center;
     align-items: center;
 }
+#teams {
+    background-color: transparent;
+    color: white;
+  }
 
-#about h1, #about p {
+  .table {
+    margin: 0 auto !important; /* Center the table horizontally */
+    width: 80%; /* Set a maximum width to limit the spread */
+    max-width: 600px; /* Adjust the maximum width as needed */
+  }
+
+  .table th,
+  .table td {
+    color: white;
+  }
+
+#teams h1, #teams p {
     color: white; /* Text color */
     text-align: center; /* Center the text horizontally within the section */
 }
 
-#skills {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/images/bg-skills.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#skills h1, #skills p {
-    color: white; /* Text color */
-    text-align: center; /* Center the text horizontally within the section */
-}
-
-#education {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/images/bg-education.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#education h1, h2, h3, h4, h5, #education p {
-    color: white; /* Text color */
-    text-align: center; /* Center the text horizontally within the section */
-}
-
-/* Style the education description */
-.education-description {
-    max-width: 700px; /* Adjust the maximum height as needed */
-    overflow-y: auto; /* Enable vertical scrolling if content exceeds the maximum height */
-}
-
-#projects{
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/images/bg-projects.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.custom-jumbotron {
-    width: 400px;
-    transform: scale(1.05); /* Adjust the scaling factor as needed */
-    transition: transform 0.2s; /* Add a smooth transition effect */
-}
-
-.button-link:hover button {
-    transform: scale(1.1); /* Adjust the scaling factor as needed */
-    transition: transform 0.2s; /* Add a smooth transition effect */
-}
-
-/* Contact */
+/* Team add */
 form {
     background-color: rgba(0, 0, 0, 0.7); /* The "0.7" value represents the level of transparency; you can adjust it */
     padding: 20px;
@@ -123,7 +75,7 @@ label, input, textarea {
     color: white;
 }
 
-#name, #email, #message {
+#team, #captain, #manager {
     background-color: transparent;
     border: 1px solid white;
     color: white;
@@ -149,7 +101,7 @@ input[type="submit"] {
 }
 
 #contact{
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/images/bg-contact.jpg'); 
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/images/bg-add.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -159,3 +111,100 @@ input[type="submit"] {
     justify-content: center;
     align-items: center;
 }
+
+/* Style for the trash icon */
+a[href^="/teams/delete/"] i.fas.fa-trash {
+    color: red;
+}
+
+/* Style for the pencil icon */
+a[href^="/teams/edit/"] i.fas.fa-pencil-alt {
+    color: blue;
+}
+
+#edit{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/images/edit.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This makes the section take the full height of the viewport */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/images/bg-login.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login hr {
+    color: white; /* Set link text color to black */
+  }
+
+  .login input {
+    width: 100%;
+    margin-bottom: 10px;
+    color: black; /* Set input text color to black */
+  }
+
+  .register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This makes the section take the full height of the viewport */
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('/images/bg-register.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .register h1{
+    color: white; /* Set link text color to black */
+  }
+
+  .register hr{
+    color: white;
+  }
+
+  .register input {
+    width: 100%;
+    margin-bottom: 10px;
+    color: black; /* Set input text color to black */
+  }
+ 
+  .login button{
+    margin-bottom: 10px;
+  }
+
+  .login p{
+    color: white;
+  }
+
+  .register p{
+    color: white;
+  }
+
+  
+
+
+  

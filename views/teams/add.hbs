@@ -1,0 +1,50 @@
+<section id="contact" class="bg-dark text-white text-center py-5">
+  <h1>{{title}}</h1>
+
+  <!-- Team Addition Form -->
+  <form method="post" id="contact-form">
+    <fieldset>
+      <label for="team">Team Name:</label>
+      <input type="text" id="team" name="team" required>
+      <div id="searchResults"></div>
+    </fieldset>
+    <fieldset>
+      <label for="captain">Captain:</label>
+      <input type="text" id="captain" name="captain" required>
+    </fieldset>
+    <fieldset>
+      <label for="manager">Manager:</label>
+      <input type="text" id="manager" name="manager" required>
+    </fieldset>
+    <input type="submit" value="Add">
+    <p id="success-message">Team added!</p>
+  </form>
+
+  <!-- JavaScript for Live Search -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const teams = ['Spain', 'Brazil', 'USA', 'Argentina', 'England']; // Replace with your actual team data
+
+      const teamInput = document.getElementById('team');
+      const searchResults = document.getElementById('searchResults');
+
+      teamInput.addEventListener('input', function () {
+        const searchTerm = teamInput.value.toLowerCase();
+        const filteredTeams = teams.filter(team => team.toLowerCase().includes(searchTerm));
+
+        displayResults(filteredTeams);
+      });
+
+      function displayResults(results) {
+        const resultsHTML = results.map(result => `<div class="search-result" onclick="selectTeam('${result}')">${result}</div>`).join('');
+        searchResults.innerHTML = resultsHTML;
+      }
+
+      // Function to handle selecting a team from the search results
+      window.selectTeam = function (teamName) {
+        teamInput.value = teamName;
+        searchResults.innerHTML = ''; // Clear the search results
+      };
+    });
+  </script>
+</section>
