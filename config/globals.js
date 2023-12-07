@@ -4,7 +4,7 @@ const configuration = {
     "github":{
         "clientId":"c101e9a8c0f366b539e0",
         "clientSecret": "70347d043c5b585a953fea603037bf1e34f72768",
-        "callbackURL" : "http://localhost:3000/github/callback"
+        "callbackURL" : "https://football-world.onrender.com//github/callback"
     }
 }
 
